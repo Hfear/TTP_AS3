@@ -13,19 +13,18 @@ function twosum(nums,target)
     {
   
         compliment = target - i; 
-        //let sum = parseInt(i) + parseInt(compliment);
-  
-        //console.log(i + " + " + compliment + " = " +  sum);
+
   
         if(nums.includes(compliment))
         {
-             return (true);
+            if(!(i === compliment))
+             {return [nums.indexOf(i),nums.indexOf(compliment)];}
              
         }
   
     }
   
-    return (false);
+    return (null);
   
 }
 
