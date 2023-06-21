@@ -9,7 +9,7 @@
    return cart; 
  }
 
- function remove(item, amt)
+ function removeFromCart(item, amt)
  {
 
     //searching for item 
@@ -27,17 +27,26 @@
     {
         
     }
+
+    //if there and not getting completley removed
     obj.quantity -= amt;
     return cart; 
 
 
  }
 
- //cart.push({meat:4});
+function calculateTotal()
+{
+    let sum = 0; 
+    cart.forEach(o => {sum += o.quantity})
+    return sum; 
+}
 
  addToCart('meat', 4);
- remove('ranch',3);
+ removeFromCart('meat',3);
  console.log(cart);
+
+ console.log(calculateTotal());
 
 
 
