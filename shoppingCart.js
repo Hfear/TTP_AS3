@@ -1,6 +1,6 @@
- let cart = [{item : 'cheese', quantity:2}];
+ let cart = [{item : 'cheese', quantity:5}];
 
- console.log(cart);
+ //console.log(cart);
 
  function addToCart(item, quantity)
  {
@@ -42,11 +42,13 @@ function calculateTotal()
     return sum; 
 }
 
- addToCart('meat', 4);
- removeFromCart('meat',3);
- console.log(cart);
+//  addToCart('meat', 4);
+//  removeFromCart('meat',3);
+//  console.log(cart);
 
- console.log(calculateTotal());
+//  console.log(calculateTotal());
+
+ module.exports = {addToCart, removeFromCart, calculateTotal};
 
 
 
